@@ -1,20 +1,27 @@
 const display = document.getElementById("display");
 
-function appendToDisplay(input) {
-	display.value += input;
+function appendToDisplay(value) {
+	display.value += value;
 }
 
-function cleardisplay() {
-	display.value = "";
+function clearDisplay() {
+    display.value = "";
 }
 
 
-function calc() {
-	try {
-		display.value = eval(display.value)
-	}
-	catch(error){
-		display.value = "Error"
-	}
-	
+function calculate() {
+    try {
+        display.value = new Function(`return ${display.value}`)();
+    } catch (error) {
+        display.value = "Error";
+    }
 }
+
+document.querySelectorAll(".btn-num, .operator-btn").forEach(button => {
+    button.addEventListener("click", function () {
+        appendToDisplay(this.textContent);
+    });
+});
+document.getElementById("btn-reset").addEventListener("click", clearDisplay);
+document.getElementById("btn-icon").addEventListener("click", clearDisplay);
+document.getElementById("btn-equals").addEventListener("click", calculate);

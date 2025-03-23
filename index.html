@@ -1,47 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Calculatore</title>
-<link rel="stylesheet" href="./css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
-
 <body>
-	<div id="box">
-		<input id="display" readonly>  
-		<div id="btn-box">
-			<div id="btn-row">
-				<button id="btn-reset" onclick="cleardisplay('AC')">AC</button>
-				<button id="btn-opera1" onclick="appendToDisplay('-/+')">-/+</button>
-				<button id="btn-opera2" onclick="appendToDisplay('%')">%</button>
-				<button id="operation" class="operator-btn" onclick="appendToDisplay('/')">\</button>
-			</div>
-			<div class="btn-row">
-				<button id="btn-num7"  onclick="appendToDisplay('7')">7</button>
-				<button id="btn-num8" onclick="appendToDisplay('8')">8</button>
-				<button id="btn-num9" onclick="appendToDisplay('9')">9</button>
-				<button id="operation" class="operator-btn" onclick="appendToDisplay('*')">*</button>
-			</div>
-			<div class="btn-row">
-				<button id="btn-num4" onclick="appendToDisplay('4')">4</button>
-				<button id="btn-num5" onclick="appendToDisplay('5')">5</button>
-				<button id="btn-num6" onclick="appendToDisplay('6')">6</button>
-				<button id="operation" class="operator-btn" onclick="appendToDisplay('-')">-</button>
-			</div>
-			<div class="btn-row">
-				<button id="btn-num1" onclick="appendToDisplay('1')">1</button>
-				<button id="btn-num2" onclick="appendToDisplay('2')">2</button>
-				<button id="btn-num3" onclick="appendToDisplay('3')">3</button>
-				<button id="operation" class="operator-btn" onclick="appendToDisplay('+')">+</button>
-			</div>
-			<div class="btn-row">
-				<button id="btn-icon" onclick="cleardisplay('icone')"><img src="./img/icon.png"></button>
-				<button id="btn-num0" onclick="appendToDisplay('0')">0</button>
-				<button id="btn-opera7" onclick="appendToDisplay('.')">.</button>
-				<button onclick="calc()" class="operator-btn">=</button>
-			</div>
-		</div>
-	</div>
-	<script src="./js/calc.js"></script>
+    <div id="box">
+        <input id="display" readonly>
+        <div id="btn-box">
+            <div class="btn-row">
+                <button id="btn-reset">AC</button>
+                <button id="btn-toggle-sign">+/-</button>
+                <button id="btn-percent">%</button>
+                <button class="operator-btn">/</button>
+            </div>
+            <div class="btn-row">
+                <button class="btn-num">7</button>
+                <button class="btn-num">8</button>
+                <button class="btn-num">9</button>
+                <button class="operator-btn">*</button>
+            </div>
+            <div class="btn-row">
+                <button class="btn-num">4</button>
+                <button class="btn-num">5</button>
+                <button class="btn-num">6</button>
+                <button class="operator-btn">-</button>
+            </div>
+            <div class="btn-row">
+                <button class="btn-num">1</button>
+                <button class="btn-num">2</button>
+                <button class="btn-num">3</button>
+                <button class="operator-btn">+</button>
+            </div>
+            <div class="btn-row">
+                <button id="btn-icon"><img src="./img/icon.png" alt="Clear"></button>
+                <button class="btn-num">0</button>
+                <button class="btn-num">.</button>
+                <button id="btn-equals">=</button>
+            </div>
+        </div>
+    </div>
+    <script src="./js/calc.js"></script>
 </body>
-
 </html>
